@@ -1,4 +1,5 @@
 #!/system/bin/sh
+date=$(date +"%Y-%m-%d %H:%M:%S")
 optimize_animations() {
     duration=0.1
     steps=50    
@@ -22,7 +23,7 @@ echo "$date *📲- 亮屏运行*"
     optimize_animations
 	echo "$date *📲- 已优化平滑过渡动画使得动画效果更加流畅*"
 else
-echo "$date *📵- 暗屏状态，跳过优化*"
+    echo "$date *📵- 暗屏状态，跳过优化*"
 fi	
 sleep 1
 done
