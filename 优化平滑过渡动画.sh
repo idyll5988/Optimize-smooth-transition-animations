@@ -19,7 +19,7 @@ optimize_animations() {
 while true; do
 screen_status=$(dumpsys window | grep "mScreenOn" | grep true)
 if [[ "${screen_status}" ]]; then
-echo "$date *📲- 亮屏运行*"
+    echo "$date *📲- 亮屏运行*"
     optimize_animations
 	echo "$date *📲- 已优化平滑过渡动画使得动画效果更加流畅*"
 else
