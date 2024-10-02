@@ -8,11 +8,13 @@ optimize_animations() {
     moveX=$(echo "scale=2; 200 / $steps" | bc) 
     moveY=$(echo "scale=2; 100 / $steps" | bc)
 
-    while [ $i -lt $steps ]; do
+    i=0
+    while [ $i -lt $STEPS ]; do
         clear
         x=$(echo "$x + $moveX" | bc)
         y=$(echo "$y + $moveY" | bc)
         sleep $duration
+		i=$((i + 1))
     done
 }
 
