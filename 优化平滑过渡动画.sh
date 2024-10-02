@@ -1,4 +1,5 @@
 #!/system/bin/sh
+#平滑过渡动画，通过更新坐标并清屏，使得动画效果更加流畅
 date=$(date +"%Y-%m-%d %H:%M:%S")
 optimize_animations() {
     duration=0.1
@@ -9,7 +10,7 @@ optimize_animations() {
     moveY=$(echo "scale=2; 100 / $steps" | bc)
 
     i=0
-    while [ $i -lt $STEPS ]; do
+    while [ $i -lt $steps ]; do
         clear
         x=$(echo "$x + $moveX" | bc)
         y=$(echo "$y + $moveY" | bc)
